@@ -33,7 +33,7 @@ export class LoginPage {
     root.popToRoot();
   }
   checkUpdate() {
-    const updateUrl = "https://www.enjoybag.com.hk/remote/upload.xml";
+    const updateUrl = "https://www.enjoybag.com.hk/remote/test/upload.xml";
     this.appUpdate
       .checkAppUpdate(updateUrl)
       .then(result => {

@@ -24,7 +24,7 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
 
-      const updateUrl = "https://www.enjoybag.com.hk/remote/upload.xml";
+      const updateUrl = "https://www.enjoybag.com.hk/remote/test/upload.xml";
       appUpdate
         .checkAppUpdate(updateUrl)
         .then(result => {
