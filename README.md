@@ -1,5 +1,5 @@
 # wingchit
-Upload photo app for wingchit company sample system
+Upload photo to sample system for WingChit company factory
 <h4>20181009</h4>
 <ul>
  <li> 输入用户名，查找客人版单款号（search 功能），选择颜色，添加备注，上传前幅，后幅，侧围两张，内格及其他，一次最多6张照片. </li>
@@ -17,10 +17,8 @@ Upload photo app for wingchit company sample system
 <li>In order to uploading new photos to some completed samples (don't exist on client or sample list), there is a button for user to add new 版单号 ,款号 and 颜色 to upload photos.
 <li> photo list change to 前幅, 后幅, 侧围, 内格1, 内格2, 袋底</li>
 </ul>
-
-
 <h4>20181227</h4>
 <ul>
   <li>Validate user input new sampleId and typeId</li>
-  <li>When app start, check app version </li>
+  <li>When app start, app auto check version and update locally </li>
 </ul>
