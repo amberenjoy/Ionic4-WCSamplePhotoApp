@@ -1,5 +1,7 @@
 {
   "name": "wingchit-dev",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

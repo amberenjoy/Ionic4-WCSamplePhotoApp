@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            用户中心
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <img src="assets/imgs/icon-1024.png" alt="">
+    <ion-card>
+        <ion-card-content>
+            <p>
+                联系我们
+            </p>
+            <span>
+                amber@enjoybag.com.hk
+            </span>
+        </ion-card-content>
+
+        <ion-card-content>
+            <p>
+                当前版本
+            </p>
+            <span>
+               {{appVersionCode}}
+            </span>
+        </ion-card-content>
+
+        <ion-card-content>
+            <button ion-button outline block (click)="checkUpdate()">检查更新</button>
+        </ion-card-content>
+    </ion-card>
+    <ion-list>
+        <div padding>
+            <button ion-button round block (click)="logout()">退出登录</button>
+        </div>
+    </ion-list>
+</ion-content>

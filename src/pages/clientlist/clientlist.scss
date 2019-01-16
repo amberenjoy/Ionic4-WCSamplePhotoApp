@@ -1,0 +1,29 @@
+page-clientlist {
+    ion-header {
+        text-align: center;
+    }
+    ion-list {
+        ion-label {
+            cursor: pointer;
+            position: relative;
+        }
+        ion-label:after {
+            position: absolute;
+            content: ">";
+            right: 5px;
+        }
+    }
+}
+
+.alert-md .alert-head {
+    padding: 20px 24px 5px;
+}
+
+.alert-md .alert-message,
+.alert-md .alert-input-group {
+    padding: 2px 24px;
+}
+
+.alert-input {
+    padding: 5px 0 2px;
+}

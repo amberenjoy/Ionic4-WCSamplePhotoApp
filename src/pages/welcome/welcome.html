@@ -1,0 +1,58 @@
+<!--
+  Generated template for the WelcomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding id="welcome">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <div class='loader'>
+                    <div class='loader_overlay'></div>
+                    <div class='loader_cogs'>
+                        <div class='loader_cogs__top'>
+                            <div class='top_part'></div>
+                            <div class='top_part'></div>
+                            <div class='top_part'></div>
+                            <div class='top_hole'></div>
+                        </div>
+                        <div class='loader_cogs__left'>
+                            <div class='left_part'></div>
+                            <div class='left_part'></div>
+                            <div class='left_part'></div>
+                            <div class='left_hole'></div>
+                        </div>
+                        <div class='loader_cogs__bottom'>
+                            <div class='bottom_part'></div>
+                            <div class='bottom_part'></div>
+                            <div class='bottom_part'></div>
+                            <div class='bottom_hole'>
+                                <!-- lol -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h1>永捷手袋</h1>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-list>
+        <ion-item>
+            <ion-label>用户名</ion-label>
+            <ion-input round type="text" name="username" #username [(ngModel)]="updateUser"></ion-input>
+        </ion-item>
+        <!-- <br>
+		<ion-item>
+			<ion-label>密码</ion-label>
+			<ion-input type="password" name="password" #password></ion-input>
+		</ion-item>
+		<br> -->
+        <br>
+        <div padding>
+            <button ion-button round block (click)="signIn(username)">登录</button>
+            <!-- <button ion-button round outline block (click)="signUp()">注册</button> -->
+        </div>
+
+    </ion-list>
+</ion-content>

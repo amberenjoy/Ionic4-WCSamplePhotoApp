@@ -5,13 +5,20 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <button ion-button full (click)="presentActionSheet()">Add Photo</button>
+<!--   <button ion-button full (click)="openCamera()">Open Camera</button>
+ --><!--   <button ion-button full (click)="openGallery()">Open Gallery</button> -->
+  <button ion-button full (click)="uploadImage()">Upload Image </button>
+<!-- 
+  <div class="header-image" tappable [ngStyle]="{'background-image': 'url('+avatar+')'}" (click)="presentActionSheet()"></div> -->
+   <ion-grid>
+    <ion-row>
+			<ion-col col-6 *ngFor="let photo of photos;let id = index">
+				<ion-card class="block">
+					<ion-icon name="trash" class="deleteIcon" (click)="deletePhoto(id)"></ion-icon>
+					<img [src]="photo" *ngIf="photo" />
+				</ion-card>
+			</ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -1,0 +1,17 @@
+page-welcome {
+    #welcome {
+        ion-grid {
+            text-align: center;
+            padding-top: 20px;
+            .loader {
+                width: 180px;
+                position: relative;
+                height: 185px;
+                transform: scale(0.7);
+            }
+        }
+        .text-input {
+            text-align: right;
+        }
+    }
+}
