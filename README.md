@@ -25,7 +25,7 @@ Upload photo to sample system for WingChit company factory
 </ul>
 <h4>20190319</h4>
 <ul>
-  <li>drag down 客户排单表 and refresh local data.</li>
+  <li>pull down 客户排单表 and refresh local data.</li>
   <li>fixed bug about 款号 is S-38046#34504 </li>
 </ul>
 
