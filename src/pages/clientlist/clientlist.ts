@@ -39,7 +39,7 @@ export class ClientlistPage {
 
   initializeclientItems() {
     this.restProvider.getUsers().then(data => {
-      this.mockData = data;
+      this.mockData = data; //original unformatted data
       this.mockClient = [];
       let uniqueList = <any>[];
       for (let i = 0; i < this.mockData.viewentry.length; i++) {
@@ -52,18 +52,33 @@ export class ClientlistPage {
         objChild.typeList = [];
         objChild.colorList = [];
 
-        let thisCustromer = this.mockData.viewentry[i].entrydata[0].text[0];
-        let thisOrdersID = this.mockData.viewentry[i].entrydata[1].text[0];
-        let thisOrdersClass = this.mockData.viewentry[i].entrydata[4].text[0];
+        let thisCustromer = this.mockData.viewentry[i].entrydata[0].text[0]; //Client Name
+        let thisOrdersID = this.mockData.viewentry[i].entrydata[1].text[0]; //Sample Id
+        let thisOrdersClass = this.mockData.viewentry[i].entrydata[4].text[0]; // Sample class
 
         for (let j = 7; j < 17; j++) {
-          if (this.mockData.viewentry[i].entrydata[j].text[0] != "") {
+          //get typeList of a sample id (7-16)
+          if (
+            !this.mockData.viewentry[i].entrydata[j].textlist &&
+            this.mockData.viewentry[i].entrydata[j].text[0] != ""
+          ) {
             let thisOrdersTypeList = <any>{};
             thisOrdersTypeList.type = true;
             thisOrdersTypeList.client = "";
             thisOrdersTypeList.type = this.mockData.viewentry[i].entrydata[
               j
             ].text[0];
+            objChild.typeList.push(thisOrdersTypeList);
+          } else if (this.mockData.viewentry[i].entrydata[j].textlist) {
+            let thisOrdersTypeList = <any>{};
+            thisOrdersTypeList.type = true;
+            thisOrdersTypeList.client = "";
+            thisOrdersTypeList.type = "";
+            this.mockData.viewentry[i].entrydata[j].textlist.text.forEach(
+              element => {
+                thisOrdersTypeList.type = thisOrdersTypeList.type + element[0];
+              }
+            );
             objChild.typeList.push(thisOrdersTypeList);
           }
         }
