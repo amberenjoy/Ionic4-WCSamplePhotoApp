@@ -14,7 +14,6 @@ Upload photo to sample system for WingChit company factory
 </ul>
 <h4>20181210</h4> 
 <ul>
-<li>User can only input name at first time, this app will remember it.</li>
 <li>Android can update new version of app locally, and don't need to install it manually after this version. </li>
 <li>In order to uploading new photos to some completed samples (don't exist on client or sample list), there is a button for user to add new 版单号 ,款号 and 颜色 to upload photos.
 <li> photo list change to 前幅, 后幅, 侧围, 内格1, 内格2, 袋底</li>
@@ -24,3 +23,9 @@ Upload photo to sample system for WingChit company factory
   <li>Validate user input new sampleId and typeId</li>
   <li>When app start, app auto check version and update locally </li>
 </ul>
+<h4>20190319</h4>
+<ul>
+  <li>drag down 客户排单表 and refresh local data.</li>
+  <li>fixed bug about 款号 is S-38046#34504 </li>
+</ul>
+
