@@ -106,6 +106,15 @@ export class ClientlistPage {
       // console.log(this.mockClient);
       console.log("refresh?");
     });
+    this.restProvider.getCompleteOrder().then(data => {
+      let completeArray = data;
+      let sampleArray = [];
+      for (let i = 0; i < completeArray["viewentry"].length; i++) {
+        let thisSampleID = completeArray["viewentry"][i].entrydata[1].text[0]; //Sample Id
+        sampleArray.push(thisSampleID);
+      }
+      console.log(sampleArray);
+    });
   }
 
   getOrder(name, orderlist) {
