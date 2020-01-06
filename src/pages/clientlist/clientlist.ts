@@ -10,17 +10,11 @@ import { RestProvider } from "../../providers/rest/rest";
 import { Storage } from "@ionic/storage";
 import { ModalPage } from "../modal/modal";
 
-/**
- * Generated class for the ClientlistPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @Component({
   selector: "page-clientlist",
   templateUrl: "clientlist.html"
 })
+
 export class ClientlistPage {
   mockClient: any;
   mockData: any;
@@ -103,17 +97,6 @@ export class ClientlistPage {
           this.mockClient[index].orders.push(objChild);
         }
       }
-      // console.log(this.mockClient);
-      console.log("refresh?");
-    });
-    this.restProvider.getCompleteOrder().then(data => {
-      let completeArray = data;
-      let sampleArray = [];
-      for (let i = 0; i < completeArray["viewentry"].length; i++) {
-        let thisSampleID = completeArray["viewentry"][i].entrydata[1].text[0]; //Sample Id
-        sampleArray.push(thisSampleID);
-      }
-      console.log(sampleArray);
     });
   }
 
@@ -123,9 +106,7 @@ export class ClientlistPage {
       orderlist: orderlist
     });
   }
-  ionViewDidLoad() {
-    console.log("ionViewDidLoad ClientlistPage");
-  }
+
   addNewSample() {
     const prompt = this.alertCtrl.create({
       title: "添加新的版单信息",
@@ -191,8 +172,13 @@ export class ClientlistPage {
       refresher.complete();
     }, 800);
   }
+
   validateInput(data) {
     var reg = /^S-(\d{5}$)/;
     return reg.test(data);
+  }
+
+  ionViewDidLoad() {
+    console.log("ionViewDidLoad ClientlistPage");
   }
 }

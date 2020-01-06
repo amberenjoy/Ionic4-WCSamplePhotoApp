@@ -1,11 +1,12 @@
 # WingChit App
 
-
 ## Key Features
+
 - Help factory staff to take photos and upload them to sample order system in real-time.
 - Only available for Android.
 
 ## App Screenshots
+
   <img src="resources/screenshots/screenshots.png" alt="UI">
 
 ## App Update Logs
@@ -42,5 +43,14 @@
 
 ### Bug History
 
-- Program execution error, backend data exception ( 款号 S-38046#34504 )
+- **Upload photos failed: image too big**
+  Use Base64 in JSON and Base64 image data value too long.
 
+  > Base64 will increase in size (about 30%) and also in processing time in both client and server.
+
+- **App loading time too long and display blank screen**
+  Modify config.xml preference.
+  <br>
+
+- **Program execution error, backend data exception**
+  款号 S-38046#34504

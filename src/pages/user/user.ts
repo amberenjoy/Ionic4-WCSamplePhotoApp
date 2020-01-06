@@ -5,11 +5,10 @@ import { AppUpdate } from "@ionic-native/app-update";
 
 @Component({
   selector: "page-about",
-  templateUrl: "login.html"
+  templateUrl: "user.html"
 })
-export class LoginPage {
-  appName: string;
-  appVersionCode: string;
+export class UserPage {
+  appVersionCode = '1.0.0';
   constructor(
     public navCtrl: NavController,
     public app: App,
@@ -22,13 +21,11 @@ export class LoginPage {
     platform.registerBackButtonAction(() => {
       nav.parent.select(0); // IF IT'S THE ROOT, EXIT THE APP.
     });
-    this.appVersion.getAppName().then(result => (this.appName = result));
     this.appVersion
       .getVersionNumber()
       .then(result => (this.appVersionCode = result));
   }
   logout() {
-    // Remove API token
     const root = this.app.getRootNav();
     root.popToRoot();
   }
@@ -39,7 +36,7 @@ export class LoginPage {
       .then(result => {
         // console.log(result);
         if (result.code === 202) {
-          console.log("It is updated app");
+          console.log("It is the latest version");
           this.showAlert();
         } else {
           console.log("Update available");
