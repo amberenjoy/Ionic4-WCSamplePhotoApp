@@ -2,17 +2,27 @@ page-clientlist {
     ion-header {
         text-align: center;
     }
+
     ion-list {
         ion-label {
             cursor: pointer;
             position: relative;
         }
+
         ion-label:after {
             position: absolute;
             content: ">";
             right: 5px;
         }
+
+        .skeleton-content {
+            height: 18px;
+            background: #ececec;
+            margin-bottom: 18px;
+        }
     }
+
+
 }
 
 .alert-md .alert-head {
