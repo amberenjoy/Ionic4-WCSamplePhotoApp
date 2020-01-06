@@ -6,7 +6,7 @@
 - Only available for Android.
 
 ## App Screenshots
-  <img src="resources/screenshots/screenshot.png" alt="UI">
+  <img src="resources/screenshots/screenshots.png" alt="UI">
 
 ## App Update Logs
 
